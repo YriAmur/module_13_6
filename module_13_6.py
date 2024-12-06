@@ -59,6 +59,7 @@ async def get_formulas(call: types.CallbackQuery):
                     "Для женщин:\n"
                     "BMR = 10 * вес + 6.25 * рост - 5 * возраст - 161")
     await call.message.answer(formula_text)
+    await call.answer()
 
 # Функция для установки возраста по нажатой Inline кнопке
 @dp.callback_query_handler(lambda call: call.data == 'calories')
